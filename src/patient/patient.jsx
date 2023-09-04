@@ -22,6 +22,7 @@ const Patient = () => {
     stressLevel: "",
     anxietyLevel: "",
     rmtPercentage: "",
+    madscore:""
   });
 
   const handleChange = (e) => {
@@ -120,7 +121,7 @@ const Patient = () => {
       {isCalled ? (
         <div className="chartDiv">
           {dataFetched ? (
-            <Graph RXA={RXA_out} RXS={RXS_out} RXD={RXD_out} len={ses_out} />
+            <Graph RXA={RXA_out} RXS={RXS_out} RXD={RXD_out} len={ses_out} madin = {formData.madscore} madout =  {Msco_out}/>
           ) : (
             <p>Data is not available for the graph.</p>
           )}
@@ -216,6 +217,18 @@ const Patient = () => {
                   value={formData.rmtPercentage}
                   onChange={handleChange}
                   style={{ marginLeft: '70px' }}
+                />
+              </div>
+              <div className="inputGroup2  ">
+                <label htmlFor="madscore">MADRAS Score % :</label>
+                <input
+                  type="text"
+                  placeholder="Enter MADRAS SCORE"
+                  id="madscore"
+                  name="madscore"
+                  value={formData.madscore}
+                  onChange={handleChange}
+                  style={{ marginLeft: '10px' }}
                 />
               </div>
             </div>
