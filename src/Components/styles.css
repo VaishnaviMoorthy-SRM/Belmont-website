@@ -16,6 +16,7 @@
 .rightDiv {
   padding: 20px;
   text-align: center;
+  z-index: inherit;
   color: white;
   @media (max-width: 768px) {
   }
@@ -29,10 +30,9 @@
 
 .circle {
   position: absolute;
-  
+
   border-radius: 50%;
   opacity: 0.7;
-
 }
 .circle1 {
   background-color: rgba(210, 205, 195, 0.574);
@@ -44,10 +44,24 @@
     width: 130px;
     height: 130px;
     left: 30px;
-  top: 130px;
+    top: 130px;
   }
 }
 
+.chart-container {
+  position: relative;
+}
+
+.chart-container .tooltip {
+  position: absolute;
+  top: -20px; /* Adjust the top position as needed */
+  left: 50%; /* Center horizontally within the container */
+  transform: translateX(-50%); /* Center horizontally within the container */
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px;
+  z-index: 100; /* Ensure it's above the chart elements */
+}
 .circle2 {
   background-color: rgba(210, 205, 195, 0.574);
   width: 200px;
@@ -58,7 +72,7 @@
     width: 100px;
     height: 100px;
     left: 100px;
-  top: 230px;
+    top: 230px;
   }
 }
 .rightDiv {
@@ -79,7 +93,27 @@
     padding: 90px 20px;
   }
 }
-
+.chartDiv{
+  margin: 80px 50px;
+  display: flex;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  z-index: inherit;
+  color: white;
+  
+  border-radius: 0px 60px 0px 60px;
+  background-color: #f1a86d;
+  border: 2px solid #ccc; /* Border properties */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.9);
+  justify-items: center;
+  align-items: center;
+  @media (max-width: 768px) {
+    /* margin-left: 0; Reset margin for mobile view */
+    margin-top: 20px;
+    padding: 90px 20px;
+  }
+}
 .hero-div2 {
   box-sizing: border-box;
   flex-shrink: 0;
@@ -97,6 +131,14 @@
   position: relative;
   align-content: center;
   flex-wrap: nowrap;
+}
+
+.hero-outdiv{
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  padding: 70px 0px;
+  padding-top: 100px;
 }
 
 .hero-title2 {
@@ -173,7 +215,7 @@
 
 input {
   background: #f2c9a8;
-  
+
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -183,16 +225,15 @@ input {
   height: 45px;
   margin-left: 30px;
   padding-left: 10px;
-  @media  (max-width: 768px) {
-  width: 125px;
-  height: 35px;
-    
+  @media (max-width: 768px) {
+    width: 125px;
+    height: 35px;
   }
 }
 input::placeholder {
   color: white;
 }
-label{
+label {
   font-size: 15px;
 }
 
@@ -203,4 +244,3 @@ label{
   border-radius: 20px;
   box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.3);
 }
-

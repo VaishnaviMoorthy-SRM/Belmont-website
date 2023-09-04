@@ -1,16 +1,16 @@
-import { useState } from 'react'
+import { useState } from "react";
+import Patient from "./patient/patient";
 
-import  New from "./Components/New";
 import NavBar from "./Components/NavBar";
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
       <NavBar></NavBar>
-      <New></New>
+      <Patient></Patient>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
