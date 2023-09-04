@@ -15,6 +15,7 @@ const Patient = () => {
   const [Msco_out, setMsco] = useState("");
   const [ses_out, setses] = useState("");
   const [formData, setFormData] = useState({
+    UR: "",
     age: "",
     gender: "",
     depressionLevel: "",
@@ -83,6 +84,7 @@ const Patient = () => {
             <h1 className="title2">
               Your Predicted <br></br> Outcome
             </h1>
+            <h3 className=" hero-text2">UR : {formData.UR}</h3>
             <h3 className=" hero-text2">Age : {formData.age}</h3>
             <h3 className=" hero-text2">Gender : {formData.gender}</h3>
             <h3 className=" hero-text2">RMT% : {formData.rmtPercentage}</h3>
@@ -132,6 +134,18 @@ const Patient = () => {
             <h1 className="title2">Enter the following Details</h1>
 
             <div className="makeinputcol">
+              <div className="inputGroup2">
+                <label htmlFor="age">UR :</label>
+                <input
+                  type="text"
+                  placeholder="Enter UR"
+                  id="age"
+                  name="age"
+                  value={formData.UR}
+                  onChange={handleChange}
+                />
+              </div>
+
               <div className="inputGroup2">
                 <label htmlFor="age">Age :</label>
                 <input
