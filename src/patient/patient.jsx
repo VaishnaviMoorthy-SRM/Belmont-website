@@ -139,8 +139,8 @@ const Patient = () => {
                 <input
                   type="text"
                   placeholder="Enter UR"
-                  id="age"
-                  name="age"
+                  id="UR"
+                  name="UR"
                   value={formData.UR}
                   onChange={handleChange}
                 />
