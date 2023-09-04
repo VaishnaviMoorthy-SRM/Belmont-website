@@ -205,7 +205,10 @@
 }
 
 
-
+.chartDiv{
+  display: flex;
+  flex-direction: column;
+}
 
 .inputGroup2 {
   display: flex;

@@ -88,10 +88,10 @@ const Patient = () => {
             <h3 className=" hero-text2">Age : {formData.age}</h3>
             <h3 className=" hero-text2">Gender : {formData.gender}</h3>
             <h3 className=" hero-text2">RMT% : {formData.rmtPercentage}</h3>
-            <h3 className=" hero-text2">RX#${ses_out} Anxiety : {fanx_out}</h3>
+            <h3 className=" hero-text2">RX#{ses_out} Anxiety : {fanx_out}</h3>
 
-            <h3 className=" hero-text2">RX#${ses_out} Stress : {fstress_out}</h3>
-            <h3 className=" hero-text2">RX#${ses_out} Depression : {fdep_out}</h3>
+            <h3 className=" hero-text2">RX#{ses_out} Stress : {fstress_out}</h3>
+            <h3 className=" hero-text2">RX#{ses_out} Depression : {fdep_out}</h3>
             <h3 className=" hero-text2">MADRS Score : {Msco_out}</h3>
             <h3 className=" hero-text2">No of Sessions : {ses_out}</h3>
           </div>
