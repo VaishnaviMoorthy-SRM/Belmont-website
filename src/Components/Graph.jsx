@@ -8,18 +8,15 @@ import {
   useXScale,
 } from "@mui/x-charts";
 
-function Graph({ RXA, RXD, RXS }) {
+function Graph({ RXA, RXD, RXS, madin, madout }) {
   // Calculate the number of data points
   const numDataPoints = RXA.length;
   console.log(numDataPoints);
-
+  const maddata = [parseInt(madin), parseInt(madout)];
   const xLabels = [0, 10, 20];
 
   return (
-    <div
-    style={{display:'flex',flexDirection:'column'}
-  }
-    >
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <LineChart
         xAxis={[{ data: xLabels, label: "No Of Sessions" }]}
         yAxis={[
@@ -41,11 +38,14 @@ function Graph({ RXA, RXD, RXS }) {
           { id: "linearAxis", scaleType: "linear" },
           { id: "logAxis", scaleType: "log" },
         ]}
-        series={
-          [
-            { data: [10,20], name: "Madras Score", curve: "linear", label: "MADRAS Score" },
-          ]
-        }
+        series={[
+          {
+            data: maddata,
+            name: "Madras Score",
+            curve: "linear",
+            label: "MADRAS Score",
+          },
+        ]}
         width={400}
         height={250}
       ></LineChart>
