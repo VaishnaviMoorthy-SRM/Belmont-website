@@ -22,7 +22,7 @@ const Patient = () => {
     stressLevel: "",
     anxietyLevel: "",
     rmtPercentage: "",
-    madscore:""
+    madscore: "",
   });
 
   const handleChange = (e) => {
@@ -80,7 +80,7 @@ const Patient = () => {
   return (
     <div className="container">
       {isCalled ? (
-        <div className="leftDiv">
+        <div className="leftDiv out">
           <div className="hero-outdiv">
             <h1 className="title2">
               Your Predicted <br></br> Outcome
@@ -89,10 +89,18 @@ const Patient = () => {
             <h3 className=" hero-text2">Age : {formData.age}</h3>
             <h3 className=" hero-text2">Gender : {formData.gender}</h3>
             <h3 className=" hero-text2">RMT% : {formData.rmtPercentage}</h3>
-            <h3 className=" hero-text2">RX#{ses_out} Anxiety : {fanx_out}</h3>
-
-            <h3 className=" hero-text2">RX#{ses_out} Stress : {fstress_out}</h3>
-            <h3 className=" hero-text2">RX#{ses_out} Depression : {fdep_out}</h3>
+            <h3 className=" hero-text2">RX#0 Depression : {formData.depressionLevel}</h3>
+            <h3 className=" hero-text2">RX#0 Stress : {formData.stressLevel}</h3>
+            <h3 className=" hero-text2">RX#0 Anxiety : {formData.anxietyLevel}</h3>
+            <h3 className=" hero-text2">
+              RX#{ses_out} Anxiety : {fanx_out}
+            </h3>
+            <h3 className=" hero-text2">
+              RX#{ses_out} Stress : {fstress_out}
+            </h3>
+            <h3 className=" hero-text2">
+              RX#{ses_out} Depression : {fdep_out}
+            </h3>
             <h3 className=" hero-text2">MADRS Score : {Msco_out}</h3>
             <h3 className=" hero-text2">No of Sessions : {ses_out}</h3>
           </div>
@@ -121,7 +129,14 @@ const Patient = () => {
       {isCalled ? (
         <div className="chartDiv">
           {dataFetched ? (
-            <Graph RXA={RXA_out} RXS={RXS_out} RXD={RXD_out} len={ses_out} madin = {formData.madscore} madout =  {Msco_out}/>
+            <Graph
+              RXA={RXA_out}
+              RXS={RXS_out}
+              RXD={RXD_out}
+              len={ses_out}
+              madin={formData.madscore}
+              madout={Msco_out}
+            />
           ) : (
             <p>Data is not available for the graph.</p>
           )}
@@ -144,7 +159,7 @@ const Patient = () => {
                   name="UR"
                   value={formData.UR}
                   onChange={handleChange}
-                  style={{ marginLeft: '90px' }}
+                  style={{ marginLeft: "90px" }}
                 />
               </div>
 
@@ -157,7 +172,7 @@ const Patient = () => {
                   name="age"
                   value={formData.age}
                   onChange={handleChange}
-                  style={{ marginLeft: '88px' }}
+                  style={{ marginLeft: "88px" }}
                 />
               </div>
               <div className="inputGroup2 ">
@@ -169,7 +184,7 @@ const Patient = () => {
                   name="gender"
                   value={formData.gender}
                   onChange={handleChange}
-                  style={{ marginLeft: '70px' }}
+                  style={{ marginLeft: "70px" }}
                 />
               </div>
               <div className="inputGroup2  ">
@@ -181,7 +196,7 @@ const Patient = () => {
                   name="depressionLevel"
                   value={formData.depressionLevel}
                   onChange={handleChange}
-                  style={{ marginLeft: '10px' }}
+                  style={{ marginLeft: "10px" }}
                 />
               </div>
               <div className="inputGroup2 ">
@@ -193,7 +208,7 @@ const Patient = () => {
                   name="stressLevel"
                   value={formData.stressLevel}
                   onChange={handleChange}
-                  style={{ marginLeft: '45px' }}
+                  style={{ marginLeft: "45px" }}
                 />
               </div>
               <div className="inputGroup2 ">
@@ -216,7 +231,7 @@ const Patient = () => {
                   name="rmtPercentage"
                   value={formData.rmtPercentage}
                   onChange={handleChange}
-                  style={{ marginLeft: '70px' }}
+                  style={{ marginLeft: "70px" }}
                 />
               </div>
               <div className="inputGroup2  ">
@@ -228,7 +243,7 @@ const Patient = () => {
                   name="madscore"
                   value={formData.madscore}
                   onChange={handleChange}
-                  style={{ marginLeft: '10px' }}
+                  style={{ marginLeft: "10px" }}
                 />
               </div>
             </div>
