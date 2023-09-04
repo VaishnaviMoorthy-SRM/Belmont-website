@@ -88,10 +88,10 @@ const Patient = () => {
             <h3 className=" hero-text2">Age : {formData.age}</h3>
             <h3 className=" hero-text2">Gender : {formData.gender}</h3>
             <h3 className=" hero-text2">RMT% : {formData.rmtPercentage}</h3>
-            <h3 className=" hero-text2">Final Anxiety : {fanx_out}</h3>
+            <h3 className=" hero-text2">RX#${ses_out} Anxiety : {fanx_out}</h3>
 
-            <h3 className=" hero-text2">Final Stress : {fstress_out}</h3>
-            <h3 className=" hero-text2">Final Depression : {fdep_out}</h3>
+            <h3 className=" hero-text2">RX#${ses_out} Stress : {fstress_out}</h3>
+            <h3 className=" hero-text2">RX#${ses_out} Depression : {fdep_out}</h3>
             <h3 className=" hero-text2">MADRS Score : {Msco_out}</h3>
             <h3 className=" hero-text2">No of Sessions : {ses_out}</h3>
           </div>
@@ -134,7 +134,7 @@ const Patient = () => {
             <h1 className="title2">Enter the following Details</h1>
 
             <div className="makeinputcol">
-              <div className="inputGroup2">
+              <div className="inputGroup2  ">
                 <label htmlFor="age">UR :</label>
                 <input
                   type="text"
@@ -143,10 +143,11 @@ const Patient = () => {
                   name="UR"
                   value={formData.UR}
                   onChange={handleChange}
+                  style={{ marginLeft: '90px' }}
                 />
               </div>
 
-              <div className="inputGroup2">
+              <div className="inputGroup2 ">
                 <label htmlFor="age">Age :</label>
                 <input
                   type="text"
@@ -155,9 +156,10 @@ const Patient = () => {
                   name="age"
                   value={formData.age}
                   onChange={handleChange}
+                  style={{ marginLeft: '88px' }}
                 />
               </div>
-              <div className="inputGroup2">
+              <div className="inputGroup2 ">
                 <label htmlFor="gender">Gender :</label>
                 <input
                   type="text"
@@ -166,9 +168,10 @@ const Patient = () => {
                   name="gender"
                   value={formData.gender}
                   onChange={handleChange}
+                  style={{ marginLeft: '70px' }}
                 />
               </div>
-              <div className="inputGroup2">
+              <div className="inputGroup2  ">
                 <label htmlFor="depressionLevel">RX#0 Depression :</label>
                 <input
                   type="text"
@@ -177,9 +180,10 @@ const Patient = () => {
                   name="depressionLevel"
                   value={formData.depressionLevel}
                   onChange={handleChange}
+                  style={{ marginLeft: '10px' }}
                 />
               </div>
-              <div className="inputGroup2">
+              <div className="inputGroup2 ">
                 <label htmlFor="stressLevel">RX#0 Stress:</label>
                 <input
                   type="text"
@@ -188,9 +192,10 @@ const Patient = () => {
                   name="stressLevel"
                   value={formData.stressLevel}
                   onChange={handleChange}
+                  style={{ marginLeft: '45px' }}
                 />
               </div>
-              <div className="inputGroup2">
+              <div className="inputGroup2 ">
                 <label htmlFor="anxietyLevel">RX#0 Anxiety :</label>
                 <input
                   type="text"
@@ -201,7 +206,7 @@ const Patient = () => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="inputGroup2">
+              <div className="inputGroup2  ">
                 <label htmlFor="rmtPercentage">RMT % :</label>
                 <input
                   type="text"
@@ -210,6 +215,7 @@ const Patient = () => {
                   name="rmtPercentage"
                   value={formData.rmtPercentage}
                   onChange={handleChange}
+                  style={{ marginLeft: '70px' }}
                 />
               </div>
             </div>
