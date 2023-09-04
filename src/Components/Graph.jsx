@@ -13,8 +13,7 @@ function Graph({ RXA, RXD, RXS, madin, madout }) {
   const numDataPoints = RXA.length;
   console.log(numDataPoints);
   const maddata = [parseInt(madin), parseInt(madout)];
-  const xLabels = [0, 10, 20];
-
+  const xLabels = RXA.length === 3 ? [0, 10,20] : [0, 10];
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <LineChart
