@@ -13,11 +13,11 @@ function Graph({ RXA, RXD, RXS, madin, madout }) {
   const numDataPoints = RXA.length;
   console.log(numDataPoints);
   const maddata = [parseInt(madin), parseInt(madout)];
-  const xLabels = RXA.length === 3 ? [0, 10,20] : [0, 10];
+  const xLabels = RXA.length === 3 ? [0, 10, 20] : [0, 10];
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <LineChart
-        xAxis={[{ data: xLabels, label: "No Of Sessions" }]}
+        xAxis={[{ data: xLabels, label: "No of Sessions" }]}
         yAxis={[
           { id: "linearAxis", scaleType: "linear" },
           { id: "logAxis", scaleType: "log" },
@@ -32,7 +32,7 @@ function Graph({ RXA, RXD, RXS, madin, madout }) {
         height={300}
       ></LineChart>
       <LineChart
-        xAxis={[{ data: [0, 10], label: "No Of Sessions" }]}
+        xAxis={[{ data: [0, 10], label: "No of Sessions" }]}
         yAxis={[
           { id: "linearAxis", scaleType: "linear" },
           { id: "logAxis", scaleType: "log" },

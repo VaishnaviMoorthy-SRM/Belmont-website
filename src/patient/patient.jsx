@@ -244,7 +244,7 @@ const Patient = () => {
                 />
               </div>
               <div className="inputGroup2  ">
-                <label htmlFor="madscore">MADRAS Score % :</label>
+                <label htmlFor="madscore">MADRS Score:</label>
                 <input
                   type="text"
                   placeholder="Enter MADRAS SCORE"
