@@ -38,7 +38,7 @@ const Patient = () => {
     // Example: Make an API call with formData
 
     console.log(formData);
-    const modelURL = `https://new-model-api-production.up.railway.app/getdata?age=${formData.age}&rmt=${formData.rmtPercentage}&dep=${formData.depressionLevel}&stress=${formData.stressLevel}&anx=${formData.anxietyLevel}`; // testing URl
+    const modelURL = `https://new-model-api-production-6bfd.up.railway.app/getdata?age=${formData.age}&rmt=${formData.rmtPercentage}&dep=${formData.depressionLevel}&stress=${formData.stressLevel}&anx=${formData.anxietyLevel}`; // testing URl
     // const modelURL = `http://127.0.0.1:5000/getdata?age=${formData.age}&rmt=${formData.rmtPercentage}&dep=${formData.depressionLevel}&stress=${formData.stressLevel}&anx=${formData.anxietyLevel}`; // testing URl
     await axios
       .get(
@@ -84,27 +84,33 @@ const Patient = () => {
           <div className="hero-outdiv">
             <div className=" krs mr">
               <h1>User Inputs</h1>
-            <h3 className=" hero-text2">UR : {formData.UR}</h3>
-            <h3 className=" hero-text2">Age : {formData.age}</h3>
-            <h3 className=" hero-text2">Gender : {formData.gender}</h3>
-            <h3 className=" hero-text2">RMT% : {formData.rmtPercentage}</h3>
-            <h3 className=" hero-text2">RX#0 Depression : {formData.depressionLevel}</h3>
-            <h3 className=" hero-text2">RX#0 Stress : {formData.stressLevel}</h3>
-            <h3 className=" hero-text2">RX#0 Anxiety : {formData.anxietyLevel}</h3>
+              <h3 className=" hero-text2">UR : {formData.UR}</h3>
+              <h3 className=" hero-text2">Age : {formData.age}</h3>
+              <h3 className=" hero-text2">Gender : {formData.gender}</h3>
+              <h3 className=" hero-text2">RMT% : {formData.rmtPercentage}</h3>
+              <h3 className=" hero-text2">
+                RX#0 Depression : {formData.depressionLevel}
+              </h3>
+              <h3 className=" hero-text2">
+                RX#0 Stress : {formData.stressLevel}
+              </h3>
+              <h3 className=" hero-text2">
+                RX#0 Anxiety : {formData.anxietyLevel}
+              </h3>
             </div>
             <div className=" krs mr">
-            <h1>User Outputs</h1>
-            <h3 className=" hero-text2">
-              RX#{ses_out} Anxiety : {fanx_out}
-            </h3>
-            <h3 className=" hero-text2">
-              RX#{ses_out} Stress : {fstress_out}
-            </h3>
-            <h3 className=" hero-text2">
-              RX#{ses_out} Depression : {fdep_out}
-            </h3>
-            <h3 className=" hero-text2">MADRS Score : {Msco_out}</h3>
-            <h3 className=" hero-text2">No of Sessions : {ses_out}</h3>
+              <h1>User Outputs</h1>
+              <h3 className=" hero-text2">
+                RX#{ses_out} Anxiety : {fanx_out}
+              </h3>
+              <h3 className=" hero-text2">
+                RX#{ses_out} Stress : {fstress_out}
+              </h3>
+              <h3 className=" hero-text2">
+                RX#{ses_out} Depression : {fdep_out}
+              </h3>
+              <h3 className=" hero-text2">MADRS Score : {Msco_out}</h3>
+              <h3 className=" hero-text2">No of Sessions : {ses_out}</h3>
             </div>
           </div>
         </div>
