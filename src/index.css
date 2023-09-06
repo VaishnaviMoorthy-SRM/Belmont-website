@@ -1,6 +1,6 @@
 :root {
-  font-family: "Spectral", serif, Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
+  /* font-family: "Quicksand", sans-serif;
+  font-family: "Spectral", serif; */
   line-height: 1.5;
   font-weight: 400;
   padding: 0px;
@@ -32,12 +32,12 @@ nav {
   /* width: 100%; */
   box-shadow: 0px 0px 20px 0 rgba(92, 91, 91, 0.2);
 }
-.site-logo-canvas{
+.site-logo-canvas {
   /* background-image: url(assets/logo.png); */
   width: 170px;
   height: 60px;
 }
-.logo-img{
+.logo-img {
   width: 200px;
   height: 70px;
 }
@@ -58,7 +58,9 @@ body {
   /* min-height: 100vh; */
   height: 100%;
   overflow-x: hidden;
-}
+  font-family: "Quicksand", sans-serif;
+  font-family: "Spectral", serif;
+} 
 
 /* hero cards section  */
 

@@ -82,9 +82,8 @@ const Patient = () => {
       {isCalled ? (
         <div className="leftDiv out">
           <div className="hero-outdiv">
-            <h1 className="title2">
-              Your Predicted <br></br> Outcome
-            </h1>
+            <div className=" krs mr">
+              <h1>User Inputs</h1>
             <h3 className=" hero-text2">UR : {formData.UR}</h3>
             <h3 className=" hero-text2">Age : {formData.age}</h3>
             <h3 className=" hero-text2">Gender : {formData.gender}</h3>
@@ -92,6 +91,9 @@ const Patient = () => {
             <h3 className=" hero-text2">RX#0 Depression : {formData.depressionLevel}</h3>
             <h3 className=" hero-text2">RX#0 Stress : {formData.stressLevel}</h3>
             <h3 className=" hero-text2">RX#0 Anxiety : {formData.anxietyLevel}</h3>
+            </div>
+            <div className=" krs mr">
+            <h1>User Outputs</h1>
             <h3 className=" hero-text2">
               RX#{ses_out} Anxiety : {fanx_out}
             </h3>
@@ -103,6 +105,7 @@ const Patient = () => {
             </h3>
             <h3 className=" hero-text2">MADRS Score : {Msco_out}</h3>
             <h3 className=" hero-text2">No of Sessions : {ses_out}</h3>
+            </div>
           </div>
         </div>
       ) : (
@@ -145,11 +148,11 @@ const Patient = () => {
           </button>
         </div>
       ) : (
-        <div className="rightDiv">
-          <div className="card2">
+        <div className="rightDiv ">
+          <div className="card23 ">
             <h1 className="title2">Enter the following Details</h1>
 
-            <div className="makeinputcol">
+            <div className="makeinputcol ">
               <div className="inputGroup2  ">
                 <label htmlFor="age">UR :</label>
                 <input
